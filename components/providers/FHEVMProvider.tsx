@@ -133,10 +133,6 @@ export function FHEVMProvider({ children }: FHEVMProviderProps) {
       try {
         setState(prev => ({ ...prev, instanceLoading: true, instanceError: null }))
 
-        if (typeof window.ethereum === 'undefined') {
-          throw new Error('Ethereum provider not found')
-        }
-
         // Use correct RPC URL instead of ethereum provider
         const rpcUrl = process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL || 'https://rpc.ankr.com/eth_sepolia'
         
@@ -159,11 +155,9 @@ export function FHEVMProvider({ children }: FHEVMProviderProps) {
         const instance = await state.sdk!.createInstance(config)
         
         if (!cancelled && instance) {
-          console.log('[FHEVM] Instance created successfully')
           setState(prev => ({ ...prev, instance, instanceLoading: false, instanceError: null }))
         }
-      } catch (err) {
-        console.error('[FHEVM] Instance creation error:', err)
+      } catch {
         if (!cancelled) {
           // Try to use SDK anyway if it's just a warning
           setState(prev => ({
