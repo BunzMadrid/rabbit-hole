@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       ...config.resolve.alias,
       "@base-org/account": false,
       "@gemini-wallet/core": false,
+      "@metamask/sdk": false,
       porto: false,
     };
     
