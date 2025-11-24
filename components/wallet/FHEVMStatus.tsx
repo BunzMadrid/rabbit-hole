@@ -9,6 +9,7 @@ export function FHEVMStatus() {
   const error = sdkError || instanceError
   const isReady = !!instance
 
+  // Don't show status if SDK hasn't loaded yet
   if (!isLoading && !isReady && !error) {
     return null
   }
