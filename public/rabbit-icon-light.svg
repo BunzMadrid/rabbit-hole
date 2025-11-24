@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light (for dark UI) - rabbit head in white -->
+  <ellipse cx="206" cy="150" rx="38" ry="90" fill="#FFFFFF"/>
+  <ellipse cx="306" cy="150" rx="38" ry="90" fill="#FFFFFF"/>
+  <path d="M256 330c61 0 110-43 110-96 0-53-49-96-110-96s-110 43-110 96c0 53 49 96 110 96z" fill="#FFFFFF"/>
+  <!-- Rabbit hole with subtle light gray so it's visible on black bg -->
+  <ellipse cx="256" cy="400" rx="120" ry="36" fill="#D1D5DB"/>
+  <ellipse cx="256" cy="400" rx="85" ry="22" fill="#E5E7EB"/>
+</svg>
